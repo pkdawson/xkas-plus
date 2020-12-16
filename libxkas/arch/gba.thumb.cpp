@@ -16,7 +16,7 @@ bool xkasGBATHUMB::assemble_command(string &s) {
 	}
 
 	part.qsplit(" ", s);
-	subpart.qsplit(",", part.size() == 2 ? part[1] : "");
+	subpart.qsplit(",", part.size() == 2 ? part[1] : nall::string(""));
 	if(assemble_01()) return true;
 	if(assemble_02()) return true;
 	if(assemble_03()) return true;

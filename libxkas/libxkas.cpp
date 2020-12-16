@@ -229,7 +229,7 @@ void xkas::assemble_defines(string &s) {
 					s = string(
 						// don't copy the beginning of the string if start = 1
 						// (since passing a length of 0 to substr copies the entire string)
-						start > 1 ? substr(s, 0, start - 1) : "",  //-1 = exclude '{'
+						start > 1 ? substr(s, 0, start - 1) : nall::string(""),  //-1 = exclude '{'
 						state.define[i].value,
 						substr(s, end + 1)        //+1 = exclude '}'
 					);

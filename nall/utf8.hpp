@@ -7,13 +7,11 @@
 #if defined(_WIN32)
 
 #undef UNICODE
-#undef _WIN32_WINNT
 #undef  NOMINMAX
 #define UNICODE
-#define _WIN32_WINNT 0x0501
 #define NOMINMAX
 #include <windows.h>
-#undef interface
+#include <shellapi.h>
 
 namespace nall {
   //UTF-8 to UTF-16
